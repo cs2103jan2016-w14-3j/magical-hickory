@@ -3,12 +3,12 @@ title: Home
 sections:
   - section_id: hero
     type: section_hero
-    image: images/hero.png
+    image: images/innovation_frontpage.png
     image_alt: App preview
     title: Driving Innovation at Speed and Scale
     content:
     actions:
-      - label: Learn More
+      - label: Get in touch
         url: /features
         style: primary
   - section_id: features

@@ -1,8 +1,9 @@
 {
-    "base_font": "nunito-sans",
+    "base_font": "fort-sans",
     "palette": "cyan",
     "header": {
-        "logo_img": "images/logo.svg",
+        "logo_img": "images/innovation_logo.svg",
+        "company_logo_img": "images/ust_logo.png",
         "logo_img_alt": "Logo",
         "has_nav": true,
         "nav_links": [
@@ -12,24 +13,24 @@
                 "style": "link"
             },
             {
-                "label": "Features",
+                "label": "Offerings",
                 "url": "/features",
                 "style": "link"
             },
             {
-                "label": "Pricing",
+                "label": "Insights",
                 "url": "/pricing",
                 "style": "link"
             },
             {
-                "label": "Style Guide",
+                "label": "About Us",
                 "url": "/style-guide",
                 "style": "link"
             },
             {
-                "label": "Sign Up",
+                "label": "Contact Us",
                 "url": "/signup",
-                "style": "primary"
+                "style": "secondary"
             }
         ]
     },
