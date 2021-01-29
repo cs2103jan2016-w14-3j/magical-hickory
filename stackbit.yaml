@@ -286,6 +286,7 @@ models:
             - section_posts
             - section_pricing
             - section_reviews
+            - section_overview
             - section_contact
   blog:
     type: page
@@ -676,6 +677,31 @@ models:
   section_reviews:
     type: object
     label: Reviews Section
+    extends:
+      - section
+    fields:
+      - type: string
+        name: subtitle
+        label: Subtitle
+        description: The subtitle of the section
+      - type: enum
+        name: background
+        label: Background
+        description: The background of the section
+        options:
+          - gray
+          - white
+        default: gray
+      - type: list
+        name: reviews
+        label: Reviews
+        items:
+          type: model
+          models:
+            - review_item
+  section_overview:
+    type: object
+    label: Overview Section
     extends:
       - section
     fields:
