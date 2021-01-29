@@ -5,10 +5,8 @@ sections:
     type: section_hero
     image: images/hero.png
     image_alt: App preview
-    title: This Is A Big Hero Headline
-    content: >-
-      Azimuth is the perfect theme for developers, designers and entrepreneurs
-      who need a sleek, modern SaaS site. 
+    title: Driving Innovation at Speed and Scale
+    content:
     actions:
       - label: Learn More
         url: /features
@@ -69,7 +67,7 @@ sections:
     title: Testimonials
     subtitle: >-
       Aliquam malesuada ligula eget est fringilla blandit. Integer finibus
-      semper libero id sodales. 
+      semper libero id sodales.
     reviews:
       - author: John Doe
         avatar: images/review1.jpg
