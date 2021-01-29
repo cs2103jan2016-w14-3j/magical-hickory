@@ -23,8 +23,8 @@ a {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.125em;
-  -webkit-transition: color .15s ease;
-  transition: color .15s ease;
+  -webkit-transition: color 0.15s ease;
+  transition: color 0.15s ease;
 
   &:hover {
     color: $gray-600;
@@ -193,5 +193,5 @@ video {
 
 img {
   height: auto;
-  max-width: 100%;
+  width: 100%;
 }

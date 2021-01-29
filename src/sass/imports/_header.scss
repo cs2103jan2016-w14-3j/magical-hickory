@@ -119,6 +119,10 @@
     position: relative;
   }
 
+  .company_logo_img {
+    display: none;
+  }
+
   .site-header {
     &:before {
       background: rgba($gray-100, 0.75);
