@@ -51,7 +51,12 @@ sections:
     title: lorem-ipsum
     subtitle: lorem-ipsum
     background: gray
-    reviews: []
+    reviews:
+      - author: lorem-ipsum
+        content: >-
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        type: review_item
     type: section_overview
 meta_title: Stackbit Azimuth Theme
 meta_description: The preview of the Azimuth theme
