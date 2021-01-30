@@ -258,7 +258,7 @@
 // offerings card
 .offerings-block {
   text-align: left;
-  padding-bottom: 5em;
+  // padding-bottom: 5em;
   // padding-left: 100px;
 
   .block-title {
@@ -289,7 +289,6 @@
     font-size: 15px;
     line-height: 24px;
     font-weight: 500;
-    width: 60%;
     margin-bottom: 20px;
   }
 }
@@ -298,6 +297,7 @@
   color: $gray-600;
   font-size: 0.88889em;
   line-height: 1.66667;
+  padding: 2em;
 
   .card {
     padding: 1.5em;
@@ -325,7 +325,6 @@
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
-  width: 80%;
 }
 
 .offerings-avatar {
@@ -349,7 +348,7 @@
 
   .cell {
     margin: 0 0 1.66667em;
-    max-width: 25%;
+    // max-width: 25%;
   }
 
   .card {
@@ -365,6 +364,19 @@
       flex: 0 0 33.333%;
       max-width: 33.333%;
     }
+    .cell {
+      max-width: 25%;
+    }
+  }
+  .block-content {
+    width: 60%;
+  }
+  .offerings-footer {
+    padding-top: 1.5em;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
   }
 }
 
@@ -643,6 +655,10 @@
   .industry-footer {
     width: 93% !important;
   }
+
+  .block-content {
+    width: 60%;
+  }
 }
 
 .industry-block {
@@ -678,7 +694,7 @@
     font-size: 15px;
     line-height: 24px;
     font-weight: 500;
-    width: 60%;
+    // width: 60%;
 
     &:last-child {
       margin-bottom: 1.66667em;
