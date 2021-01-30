@@ -38,32 +38,32 @@
         "sections": [
             {
                 "type": "footer_text",
-                "image": "images/logo-alt.svg",
+                "image": "images/innovation_logo_white.svg",
                 "image_url": "/",
                 "image_alt": "Footer logo",
-                "content": "Stackbit theme demo"
+                "content": ""
             },
             {
                 "type": "footer_nav",
                 "title": "Company",
                 "nav_links": [
                     {
-                        "label": "About Us",
+                        "label": "Offerings",
                         "url": "/about",
                         "style": "link"
                     },
                     {
-                        "label": "Blog",
+                        "label": "Insights",
                         "url": "/blog",
                         "style": "link"
                     },
                     {
-                        "label": "Sign Up",
+                        "label": "About Us",
                         "url": "/signup",
                         "style": "link"
                     },
                     {
-                        "label": "Contact",
+                        "label": "Contact Us",
                         "url": "/contact",
                         "style": "link"
                     }
@@ -130,7 +130,7 @@
                 "style": "link"
             }
         ],
-        "content": "&copy; Stackbit. All rights reserved. This Jamstack site was created with <a href=\"https://www.stackbit.com/?utm_source=deployed-footer\" target=\"_blank\" rel=\"noopener\">Stackbit</a>. Create yours <a href=\"https://app.stackbit.com/create?theme=azimuth&utm_source=deployed-footer\" target=\"_blank\" rel=\"noopener\">now</a>."
+        "content": "&copy; UST Digital COE. All rights reserved. "
     },
-    "title": "Azimuth"
+    "title": "UST Innovation"
 }

@@ -19,6 +19,8 @@ import SectionPosts from "./SectionPosts";
 import SectionPricing from "./SectionPricing";
 import SectionReviews from "./SectionReviews";
 import SectionOverview from "./SectionOverview";
+import SectionIndustry from "./SectionIndustry";
+import SectionOffering from "./SectionOffering";
 import Layout from "./Layout";
 
 export {
@@ -43,6 +45,8 @@ export {
   SectionPricing,
   SectionReviews,
   SectionOverview,
+  SectionIndustry,
+  SectionOffering,
   Layout,
 };
 
@@ -68,5 +72,7 @@ export default {
   SectionPricing,
   SectionReviews,
   SectionOverview,
+  SectionIndustry,
+  SectionOffering,
   Layout,
 };

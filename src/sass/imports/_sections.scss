@@ -254,6 +254,120 @@
     margin-bottom: 0;
   }
 }
+
+// offerings card
+.offerings-block {
+  text-align: left;
+  padding-bottom: 5em;
+  // padding-left: 100px;
+
+  .block-title {
+    font-size: 1.66667em;
+    margin: 0 0 0.25em;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 24px;
+
+    &:last-child {
+      margin-bottom: 1em;
+    }
+  }
+
+  .block-subtitle {
+    color: #231f20;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 24px;
+
+    &:last-child {
+      margin-bottom: 1.66667em;
+    }
+  }
+
+  .block-content {
+    color: #231f20;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+    width: 60%;
+    margin-bottom: 20px;
+  }
+}
+.offerings {
+  border: 0;
+  color: $gray-600;
+  font-size: 0.88889em;
+  line-height: 1.66667;
+
+  .card {
+    padding: 1.5em;
+  }
+}
+
+.offerings-index {
+  position: relative;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 50px;
+  color: $color-primary;
+}
+
+.offerings-text {
+  position: relative;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 24px;
+  margin-bottom: 0.2em;
+}
+
+.offerings-footer {
+  padding-top: 1.5em;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.offerings-avatar {
+  height: 80px;
+  margin-right: 0.9375em;
+}
+
+.offerings-subtitle {
+  color: #231f20;
+  font-size: 13px;
+  line-height: 21px;
+  margin: 0;
+}
+
+// offerings blocks
+.offerings-block {
+  .grid {
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .cell {
+    margin: 0 0 1.66667em;
+    max-width: 25%;
+  }
+
+  .card {
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .offerings-block {
+    .cell:first-child:nth-last-child(3),
+    .cell:first-child:nth-last-child(3) ~ .cell {
+      -ms-flex: 0 0 33.333%;
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+  }
+}
+
 // overview blocks
 .overview-block {
   .grid {
@@ -444,7 +558,7 @@
 // overview card
 .overview-block {
   text-align: left;
-  // margin-left: 20px;
+  // padding-left: 100px;
 
   .block-title {
     font-size: 1.66667em;
@@ -504,6 +618,116 @@
 
 .overview-subtitle {
   color: #231f20;
+  font-size: 13px;
+  line-height: 21px;
+  margin: 0;
+}
+
+// industry card
+@media only screen and (min-width: 901px) {
+  // .industry-block {
+  //   .cell:first-child:nth-last-child(4),
+  //   .cell:first-child:nth-last-child(4) ~ .cell {
+  //     -ms-flex: 0 0 25%;
+  //     flex: 0 0 25%;
+  //     max-width: 25%;
+  //   }
+  // }
+  .industry-block {
+    .grid {
+      // -ms-flex-pack: center;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+  }
+  .industry-footer {
+    width: 93% !important;
+  }
+}
+
+.industry-block {
+  text-align: left;
+  padding-top: 40px;
+  // margin-left: 20px;
+
+  .block-title {
+    font-size: 1.66667em;
+    margin: 0 0 0.25em;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 24px;
+
+    &:last-child {
+      margin-bottom: 1em;
+    }
+  }
+
+  .block-subtitle {
+    color: #231f20;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 24px;
+
+    &:last-child {
+      margin-bottom: 1.66667em;
+    }
+  }
+
+  .block-content {
+    color: #231f20;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+    width: 60%;
+
+    &:last-child {
+      margin-bottom: 1.66667em;
+    }
+  }
+}
+.industry {
+  border: 0;
+  color: $gray-600;
+  font-size: 0.88889em;
+  line-height: 1.66667;
+  padding: 0 !important;
+  // width: 25%;
+  position: relative;
+  margin-bottom: 20px;
+  margin: 0.5em;
+  .card {
+    padding: 1.5em;
+  }
+}
+
+.industry-text {
+  position: relative;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 24px;
+  margin-bottom: 0.2em;
+}
+
+.industry-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  width: 94%;
+  padding: 10px 10px;
+  background: inherit;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-attachment: fixed;
+  color: white;
+  overflow: hidden;
+}
+
+.industry-avatar {
+  height: 330px;
+  // width: 200px;
+}
+
+.industry-subtitle {
+  color: white;
   font-size: 13px;
   line-height: 21px;
   margin: 0;

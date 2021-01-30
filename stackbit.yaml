@@ -699,6 +699,20 @@ models:
           type: model
           models:
             - review_item
+  review_item:
+    type: object
+    label: Review Item
+    labelField: author
+    fields:
+      - type: string
+        name: author
+        label: Author
+      - type: image
+        name: avatar
+        label: Avatar
+      - type: text
+        name: content
+        label: Content
   section_overview:
     type: object
     label: Overview Section
@@ -738,17 +752,101 @@ models:
       - type: text
         name: content
         label: Content
-  review_item:
+  section_industry:
     type: object
-    label: Review Item
-    labelField: author
+    label: Industry Section
+    extends:
+      - section
     fields:
       - type: string
-        name: author
-        label: Author
+        name: subtitle
+        label: Subtitle
+        description: The subtitle of the section
+      - type: string
+        name: content
+        label: Content
+        description: The content of the section
+      - type: string
+        name: button
+        label: Button
+        description: The button of the section
+      - type: enum
+        name: background
+        label: Background
+        description: The background of the section
+        options:
+          - gray
+          - white
+        default: gray
+      - type: list
+        name: reviews
+        label: Reviews
+        items:
+          type: model
+          models:
+            - industry_item
+  industry_item:
+    type: object
+    label: Overview Item
+    labelField: title
+    fields:
+      - type: string
+        name: title
+        label: Title
       - type: image
-        name: avatar
-        label: Avatar
+        name: background
+        label: Background
+      - type: text
+        name: content
+        label: Content
+  section_offering:
+    type: object
+    label: Offerings Section
+    extends:
+      - section
+    fields:
+      - type: string
+        name: subtitle
+        label: Subtitle
+        description: The subtitle of the section
+      - type: string
+        name: content
+        label: Content
+        description: The content of the section
+      - type: string
+        name: button
+        label: Button
+        description: The button of the section
+      - type: string
+        name: extra
+        label: Extra
+        description: The extra text of the section
+      - type: enum
+        name: background
+        label: Background
+        description: The background of the section
+        options:
+          - gray
+          - white
+        default: gray
+      - type: list
+        name: reviews
+        label: Reviews
+        items:
+          type: model
+          models:
+            - offering_item
+  offering_item:
+    type: object
+    label: Offering Item
+    labelField: title
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: image
+        name: illustration
+        label: Illustration
       - type: text
         name: content
         label: Content
