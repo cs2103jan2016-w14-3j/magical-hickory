@@ -723,7 +723,21 @@ models:
         items:
           type: model
           models:
-            - review_item
+            - overview_item
+  overview_item:
+    type: object
+    label: Overview Item
+    labelField: title
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: image
+        name: background
+        label: Background
+      - type: text
+        name: content
+        label: Content
   review_item:
     type: object
     label: Review Item

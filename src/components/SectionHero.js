@@ -10,6 +10,7 @@ export default class SectionHero extends React.Component {
     return (
       <div className="hero-container">
         <img
+          className="hero-img"
           src={withPrefix(_.get(section, "image", null))}
           alt={_.get(section, "image_alt", null)}
         />

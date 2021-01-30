@@ -12,25 +12,25 @@ sections:
         url: /features
         style: primary
   - section_id: lorem-ipsum
-    title: lorem-ipsum
-    subtitle: lorem-ipsum
-    background: gray
+    title: How We Work
+    subtitle: When Tackling Innovation
+    background: white
     reviews:
-      - author: lorem-ipsum
+      - title: Innovate
+        background: images/how_we_work_innovate.png
         content: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        type: review_item
-      - author: lorem-ipsum
+          using Design Thinking Methodologies
+        type: overview_item
+      - title: Validate
+        background: images/how_we_work_validate.png
         content: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        type: review_item
-      - author: lorem-ipsum
+          using Data Driven Experiment
+        type: overview_item
+      - title: Scale
+        background: images/how_we_work_scale.png
         content: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        type: review_item
+          using Modern Digital Architecture
+        type: overview_item
     type: section_overview
   - section_id: reviews
     type: section_reviews
