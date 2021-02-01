@@ -113,14 +113,25 @@ sections:
   #         Interdum et malesuada fames ac ante ipsum primis in faucibus.
   - section_id: call-to-action
     type: section_cta_swift
-    title: This Is Call To Action Block!
-    subtitle_1: This is an optional description for the call to action block.
-    subtitle_2: Test
+    title: Let's get you started
+    subtitle_1: Grow your website. Anytime, anywhere, for different use cases.
+    subtitle_2: GET UP AND RUNNING
     image: images/review3.jpg
+    image_alt: cta_image
+    background_color: "#FFFFFF"
     actions:
       - label: Get Started
         url: /signup
         style: primary
+        has_icon: true
+        icon: arrow-right
+        icon_position: right
+        icon_color: black
+        background_color: white
+        text_color: black
+        has_border: true
+        border: black
+        arrow_color: black
   # - section_id: recent-posts
   #    type: section_posts
   #    background: gray
