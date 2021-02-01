@@ -11,7 +11,6 @@ import Header from "./Header";
 import Icon from "./Icon";
 import SectionContact from "./SectionContact";
 import SectionContent from "./SectionContent";
-import SectionCta from "./SectionCta";
 import SectionFaq from "./SectionFaq";
 import SectionFeatures from "./SectionFeatures";
 import SectionHero from "./SectionHero";
@@ -23,6 +22,8 @@ import SectionIndustry from "./SectionIndustry";
 import SectionOffering from "./SectionOffering";
 import SectionBanner from "./SectionBanner";
 import Layout from "./Layout";
+import SectionCtaSwift from "./SectionCtaSwift";
+import SectionCta from "./SectionCta";
 
 export {
   Action,
@@ -38,7 +39,6 @@ export {
   Icon,
   SectionContact,
   SectionContent,
-  SectionCta,
   SectionFaq,
   SectionFeatures,
   SectionHero,
@@ -50,6 +50,8 @@ export {
   SectionOffering,
   SectionBanner,
   Layout,
+  SectionCtaSwift,
+  SectionCta
 };
 
 export default {
@@ -78,4 +80,5 @@ export default {
   SectionOffering,
   SectionBanner,
   Layout,
+  SectionCtaSwift
 };

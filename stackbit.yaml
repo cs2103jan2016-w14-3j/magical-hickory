@@ -290,6 +290,7 @@ models:
             - section_reviews
             - section_overview
             - section_contact
+            - section_cta_swift
   blog:
     type: page
     urlPath: /blog
@@ -485,6 +486,35 @@ models:
         name: subtitle
         label: Subtitle
         description: The subtitle of the section
+      - type: list
+        name: actions
+        label: Action Buttons
+        items:
+          type: model
+          models:
+            - action
+  section_cta_swift:
+    type: object
+    label: Call to Action Section for Swift
+    extends:
+      - section
+    fields:
+      - type: string
+        name: title
+        label: Main Title
+        description: The main title of the section
+      - type: string
+        name: subtitle_1
+        label: Subtitle
+        description: The subtitle of the section
+      - type: string
+        name: subtitle_2
+        label: Subtitle
+        description: The subtitle of the section
+      - type: image
+        name: image
+        label: Image
+        description: Feature image
       - type: list
         name: actions
         label: Action Buttons

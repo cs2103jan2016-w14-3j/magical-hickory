@@ -9,6 +9,7 @@ import Footer from "./Footer";
 
 export default class Body extends React.Component {
   render() {
+    console.log(this.props.children)
     let title =
       _.get(this.props, "pageContext.frontmatter.title", null) +
       " | " +
@@ -96,6 +97,7 @@ export default class Body extends React.Component {
           />
         </Helmet>
         <div id="page" className="site">
+
           <Header {...this.props} />
           <main id="content" className="site-content">
             {this.props.children}
