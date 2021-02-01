@@ -111,6 +111,47 @@ sections:
   #       content: >-
   #         Integer consectetur purus neque, ac porttitor enim convallis vitae.
   #         Interdum et malesuada fames ac ante ipsum primis in faucibus.
+
+  - section_id: partnership-swift
+    type: partnership_swift
+    title: Works with
+    subtitle_1: SUPPORT TECHNOLOGY
+    align: left
+    background: F7F7F1
+    grid_items:
+      - image: images/github.svg
+        image_alt: github logo
+        image_align: center
+      - image: images/netlify.svg
+        image_alt: Netlify logo
+        image_align: center
+      - image: images/gatsby.svg
+        image_alt: Gatsby logo
+        image_align: center
+      - image: images/nextjs.svg
+        image_alt: Next logo
+        image_align: center
+      - image: images/contentful.svg
+        image_alt: Contentful logo
+        image_align: center
+      - image: images/sanity.svg
+        image_alt: Sanity logo
+        image_align: center
+      - image: images/dato.svg
+        image_alt: Dato logo
+        image_align: center
+      - image: images/jekyll.svg
+        image_alt: Jekyll logo
+        image_align: center
+      - image: images/hugo.svg
+        image_alt: Hugo logo
+        image_align: center
+      - image: images/manymore.svg
+        image_alt: And many more
+        image_align: center
+    grid_cols: four
+    grid_gap_horiz: medium
+    grid_gap_vert: medium
   - section_id: call-to-action
     type: section_cta_swift
     title: Let's get you started
@@ -120,7 +161,7 @@ sections:
     image_alt: cta_image
     background_color: "#FFFFFF"
     actions:
-      - label: Get Started
+      - label: Get in touch
         url: /signup
         style: primary
         has_icon: true

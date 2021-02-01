@@ -13,6 +13,7 @@ const BgDiv = styled.section`
   .border-black{
     border: 1px solid black;
     background-color: white;
+    border-radius: 0px;
   }
 
   .cell{

@@ -7,7 +7,6 @@ export default class Icon extends React.Component {
         let icon = _.get(this.props, 'icon', null);
         let action = _.get(this.props, 'action', null);
         let icon_color = action.icon_color;
-        console.log('color is ', action);
         return (
             <svg className="icon" viewBox="0 0 24 24" style={{fill: icon_color|| "white"}} xmlns="http://www.w3.org/2000/svg">
               {(icon === 'arrow-left') ? (

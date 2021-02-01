@@ -521,6 +521,31 @@ models:
         items:
           type: model
           models:
+            - 
+  partnership_swift:
+    type: object
+    label: Partnership secton for Swift
+    extends:
+      - section
+    fields:
+      - type: string
+        name: title
+        label: Main Title
+        description: The main title of the section
+      - type: string
+        name: subtitle_1
+        label: Subtitle
+        description: The subtitle of the section
+      - type: image
+        name: image
+        label: Image
+        description: Feature image
+      - type: list
+        name: actions
+        label: Action Buttons
+        items:
+          type: model
+          models:
             - action
   section_faq:
     type: object
