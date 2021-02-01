@@ -283,6 +283,8 @@ models:
             - section_faq
             - section_features
             - section_hero
+            - section_offering
+            - section_industry
             - section_posts
             - section_pricing
             - section_reviews
@@ -577,12 +579,98 @@ models:
           type: model
           models:
             - action
+  section_offering_feature:
+    type: object
+    label: Offering Features Section
+    extends:
+      - section
+    fields:
+      - type: string
+        name: subtitle
+        label: Subtitle
+        description: The subtitle of the section
+      - type: enum
+        name: background
+        label: Background
+        description: The background of the section
+        options:
+          - gray
+          - white
+        default: gray
+      - type: list
+        name: features
+        label: Features
+        items:
+          type: model
+          models:
+            - offering_feature_item
+  offering_feature_item:
+    type: object
+    label: Feature Item
+    labelField: title
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: markdown
+        name: content
+        label: Content
+        description: Feature description
+      - type: image
+        name: image
+        label: Image
+        description: Feature image
+      - type: string
+        name: image_alt
+        label: Image Alt Text
+        description: The alt text of the feature image
+      - type: list
+        name: actions
+        label: Action Buttons
+        items:
+          type: model
+          models:
+            - action
   section_hero:
     type: object
     label: Hero Section
     extends:
       - section
     fields:
+      - type: string
+        name: title
+        label: Title
+      - type: markdown
+        name: content
+        label: Content
+        description: The text content of the section
+      - type: image
+        name: image
+        label: Image
+        description: The image of the section
+      - type: string
+        name: image_alt
+        label: Image Alt Text
+        description: The alt text of the section image
+      - type: list
+        name: actions
+        label: Action Buttons
+        items:
+          type: model
+          models:
+            - action
+  section_banner:
+    type: object
+    label: Banner Section
+    extends:
+      - section
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: pagetitle
+        label: Page Title
       - type: markdown
         name: content
         label: Content

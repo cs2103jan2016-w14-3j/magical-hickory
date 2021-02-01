@@ -21,6 +21,7 @@ import SectionReviews from "./SectionReviews";
 import SectionOverview from "./SectionOverview";
 import SectionIndustry from "./SectionIndustry";
 import SectionOffering from "./SectionOffering";
+import SectionBanner from "./SectionBanner";
 import Layout from "./Layout";
 
 export {
@@ -47,6 +48,7 @@ export {
   SectionOverview,
   SectionIndustry,
   SectionOffering,
+  SectionBanner,
   Layout,
 };
 
@@ -74,5 +76,6 @@ export default {
   SectionOverview,
   SectionIndustry,
   SectionOffering,
+  SectionBanner,
   Layout,
 };
