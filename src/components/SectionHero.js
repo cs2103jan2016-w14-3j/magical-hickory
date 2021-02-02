@@ -1,7 +1,7 @@
 import React from "react";
 import _ from "lodash";
 
-import { withPrefix, markdownify } from "../utils";
+import { withPrefix } from "../utils";
 import CtaButtons from "./CtaButtons";
 
 export default class SectionHero extends React.Component {

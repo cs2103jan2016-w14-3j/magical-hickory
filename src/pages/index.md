@@ -11,6 +11,9 @@ sections:
       - label: Get in touch
         url: /features
         style: primary
+        has_icon: true
+        icon: arrow-right
+        icon_position: right
   - section_id: how-we-work
     title: How We Work
     subtitle: When Tackling Innovation
