@@ -25,6 +25,7 @@ import Layout from "./Layout";
 import SectionCtaSwift from "./SectionCtaSwift";
 import SectionCta from "./SectionCta";
 import PartnershipSwift from "./PartnershipSwift";
+import ThemesSwift from "./ThemesSwift";
 
 export {
   Action,
@@ -53,7 +54,8 @@ export {
   Layout,
   SectionCta,
   SectionCtaSwift,
-  PartnershipSwift
+  PartnershipSwift,
+  ThemesSwift
 };
 
 export default {
@@ -83,5 +85,6 @@ export default {
   SectionBanner,
   Layout,
   SectionCtaSwift,
-  PartnershipSwift
+  PartnershipSwift,
+  ThemesSwift
 };

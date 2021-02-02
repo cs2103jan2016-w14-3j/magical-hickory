@@ -57,6 +57,7 @@ const SCWIndexDiv = styled.div`
 
 export default class SectionCtaSwift extends React.Component {
     render() {
+      console.log(this.props)
         let section = _.get(this.props, 'section', null);
         let background_color = section.background_color;
         return (

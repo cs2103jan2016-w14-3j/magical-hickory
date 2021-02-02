@@ -28,10 +28,16 @@
                 "style": "link"
             },
             {
+                "label": "Themes",
+                "url": "/themes",
+                "style": "link"
+            },
+            {
                 "label": "Contact Us",
                 "url": "/signup",
                 "style": "secondary"
             }
+
         ]
     },
     "footer": {
