@@ -8,9 +8,6 @@ const OfferingIndexDiv = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  .offerings-index{
-    background: red
-  }
 `;
 
 export default class SectionIndustry extends React.Component {

@@ -3,19 +3,28 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledTab = styled.li`
+  &.tab-list-item {
+    display: inline-block;
+    list-style: none;
+    color: white;
+    font-weight: 800; 
+    margin: 0.8em 1.5em 0.5em 1.5em;
+  }
+  &.tab-list-active {
+    border-bottom: 2px solid white;
+  }
 
-&.tab-list-item {
-  display: inline-block;
-  list-style: none;
-  margin-bottom: -1px;
-  padding: 0.5rem 0.75rem;
-}
+  @media (max-width:801px){
+  &.tab-list-item {
+      margin: 0.8em 0em 0.5em 1.5em;
+    }
+  }
 
-&.tab-list-active {
-  background-color: white;
-  text-decoration: underline;
-  border-width: 1px 1px 0 1px;
-}
+  @media (max-width:1500px){
+    &.tab-list-item {
+        margin: 0.8em 0em 0.5em 1.5em;
+      }
+    }
 `
 
 class CustomTab extends React.Component {

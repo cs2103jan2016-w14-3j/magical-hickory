@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 import CustomTab from './customtab';
 import styled from 'styled-components';
 
-const StyledOl = styled.ol`
-  ol.tab-list {
-      border-bottom: 1px solid black;
-      padding-left: 2px;
+const StyledOl = styled.div`
+    &.tabs {
+      
     }
-    
+    ol{
+      margin-left: 30px;
+    }
+
 `;
 
 export default class CustomTabs extends Component {
@@ -23,6 +25,8 @@ export default class CustomTabs extends Component {
       
       onClickTabItem = (tab) => {
         this.setState({ activeTab: tab });
+        let newTab = tab.charAt(0).toUpperCase() + tab.slice(1).toLowerCase();
+        this.props.tellParent(newTab);
       }
 
     render() {
@@ -36,12 +40,10 @@ export default class CustomTabs extends Component {
         } = this;
     
         return (
-          <StyledOl>
-            <div className="tabs">
+            <StyledOl className="tabs">
             <ol className="tab-list">
               {children.map((child) => {
                 const { label } = child.props;
-
                 return (
                   <CustomTab
                     activeTab={activeTab}
@@ -52,14 +54,12 @@ export default class CustomTabs extends Component {
                 );
               })}
             </ol>
-
             <div className="tab-content">
               {children.map((child) => {
                 if (child.props.label !== activeTab) return undefined;
                 return child.props.children;
               })}
             </div>
-          </div>
           </StyledOl> 
         );
       }

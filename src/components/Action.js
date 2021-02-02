@@ -10,7 +10,7 @@ export default class Action extends React.Component {
         let action_style = _.get(action, 'style', null) || 'link';
         let action_icon = _.get(action, 'icon', null) || 'arrow-left';
         let action_icon_pos = _.get(action, 'icon_position', null) || 'left';
-        let text_color = _.get(action,'text_color', null) || "black";
+        let text_color = _.get(action,'text_color', null) || "";
         let border_color = _.get(action,'border', null) || "white";
         return (
             <Link to={withPrefix(_.get(action, 'url', null))}

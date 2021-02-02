@@ -11,6 +11,7 @@ sections:
       - label: Get in touch
         url: /features
         style: primary
+        border: white
   - section_id: how-we-work
     title: How We Work
     subtitle: When Tackling Innovation
@@ -157,7 +158,7 @@ sections:
     title: Let's get you started
     subtitle_1: Grow your website. Anytime, anywhere, for different use cases.
     subtitle_2: GET UP AND RUNNING
-    image: images/review3.jpg
+    image: images/ctaswift_1.svg
     image_alt: cta_image
     background_color: "#FFFFFF"
     actions:

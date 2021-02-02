@@ -51,7 +51,7 @@ const SCWIndexDiv = styled.div`
     color: black;
   }
   .ctaswift-img{
-    max-height: 450px;
+    
   }
 `;
 
