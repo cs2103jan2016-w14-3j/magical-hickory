@@ -154,13 +154,14 @@ sections:
     grid_gap_horiz: medium
     grid_gap_vert: medium
   - section_id: call-to-action
+    custom: ''
     type: section_cta_swift
     title: Let's get you started
     subtitle_1: Grow your website. Anytime, anywhere, for different use cases.
     subtitle_2: GET UP AND RUNNING
     image: images/ctaswift_1.svg
     image_alt: cta_image
-    background_color: "#FFFFFF"
+    background_color: "FFFFFF"
     actions:
       - label: Get in touch
         url: /signup

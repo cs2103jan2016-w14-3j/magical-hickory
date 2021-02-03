@@ -9,6 +9,8 @@ const StyledTab = styled.li`
     color: white;
     font-weight: 800; 
     margin: 0.8em 1.5em 0.5em 1.5em;
+    font-size: 13px;
+    cursor: pointer;
   }
   &.tab-list-active {
     border-bottom: 2px solid white;
@@ -33,12 +35,10 @@ class CustomTab extends React.Component {
       label: PropTypes.string.isRequired,
       onClick: PropTypes.func.isRequired,
     };
-  
     onClick = () => {
       const { label, onClick } = this.props;
       onClick(label);
     }
-  
     render() {
       const {
         onClick,
