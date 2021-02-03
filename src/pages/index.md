@@ -14,6 +14,7 @@ sections:
         has_icon: true
         icon: arrow-right
         icon_position: right
+        border: white
   - section_id: how-we-work
     title: How We Work
     subtitle: When Tackling Innovation
@@ -114,18 +115,72 @@ sections:
   #       content: >-
   #         Integer consectetur purus neque, ac porttitor enim convallis vitae.
   #         Interdum et malesuada fames ac ante ipsum primis in faucibus.
-  # - section_id: call-to-action
-  #   type: section_cta
-  #   title: This Is Call To Action Block!
-  #   subtitle: This is an optional description for the call to action block.
-  #   actions:
-  #     - label: Get Started
-  #       url: /signup
-  #       style: primary
+
+  - section_id: partnership-swift
+    type: partnership_swift
+    title: Works with
+    subtitle_1: SUPPORT TECHNOLOGY
+    align: left
+    background: F7F7F1
+    grid_items:
+      - image: images/github.svg
+        image_alt: github logo
+        image_align: center
+      - image: images/netlify.svg
+        image_alt: Netlify logo
+        image_align: center
+      - image: images/gatsby.svg
+        image_alt: Gatsby logo
+        image_align: center
+      - image: images/nextjs.svg
+        image_alt: Next logo
+        image_align: center
+      - image: images/contentful.svg
+        image_alt: Contentful logo
+        image_align: center
+      - image: images/sanity.svg
+        image_alt: Sanity logo
+        image_align: center
+      - image: images/dato.svg
+        image_alt: Dato logo
+        image_align: center
+      - image: images/jekyll.svg
+        image_alt: Jekyll logo
+        image_align: center
+      - image: images/hugo.svg
+        image_alt: Hugo logo
+        image_align: center
+      - image: images/manymore.svg
+        image_alt: And many more
+        image_align: center
+    grid_cols: four
+    grid_gap_horiz: medium
+    grid_gap_vert: medium
+  - section_id: call-to-action
+    type: section_cta_swift
+    title: Let's get you started
+    subtitle_1: Grow your website. Anytime, anywhere, for different use cases.
+    subtitle_2: GET UP AND RUNNING
+    image: images/ctaswift_1.svg
+    image_alt: cta_image
+    background_color: "#FFFFFF"
+    actions:
+      - label: Get in touch
+        url: /signup
+        style: primary
+        has_icon: true
+        icon: arrow-right
+        icon_position: right
+        icon_color: black
+        background_color: white
+        text_color: black
+        has_border: true
+        border: black
+        arrow_color: black
   # - section_id: recent-posts
-  #   type: section_posts
-  #   background: gray
-  #   title: Latest Posts
+  #    type: section_posts
+  #    background: gray
+  #    title: Latest Posts
 meta_title: Stackbit Azimuth Theme
 meta_description: The preview of the Azimuth theme
 template: landing

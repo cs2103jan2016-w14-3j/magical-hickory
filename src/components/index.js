@@ -11,7 +11,6 @@ import Header from "./Header";
 import Icon from "./Icon";
 import SectionContact from "./SectionContact";
 import SectionContent from "./SectionContent";
-import SectionCta from "./SectionCta";
 import SectionFaq from "./SectionFaq";
 import SectionFeatures from "./SectionFeatures";
 import SectionHero from "./SectionHero";
@@ -24,6 +23,10 @@ import SectionOffering from "./SectionOffering";
 import SectionOfferingFeature from "./SectionOfferingFeature";
 import SectionBanner from "./SectionBanner";
 import Layout from "./Layout";
+import SectionCtaSwift from "./SectionCtaSwift";
+import SectionCta from "./SectionCta";
+import PartnershipSwift from "./PartnershipSwift";
+import ThemesSwift from "./ThemesSwift";
 
 export {
   Action,
@@ -39,7 +42,6 @@ export {
   Icon,
   SectionContact,
   SectionContent,
-  SectionCta,
   SectionFaq,
   SectionFeatures,
   SectionHero,
@@ -52,6 +54,10 @@ export {
   SectionBanner,
   SectionOfferingFeature,
   Layout,
+  SectionCta,
+  SectionCtaSwift,
+  PartnershipSwift,
+  ThemesSwift
 };
 
 export default {
@@ -81,4 +87,7 @@ export default {
   SectionBanner,
   SectionOfferingFeature,
   Layout,
+  SectionCtaSwift,
+  PartnershipSwift,
+  ThemesSwift
 };
