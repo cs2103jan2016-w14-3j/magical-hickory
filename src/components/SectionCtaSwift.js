@@ -1,8 +1,8 @@
-import React from 'react';
-import _ from 'lodash';
+import React from "react";
+import _ from "lodash";
 
-import {htmlToReact, withPrefix} from '../utils';
-import CtaButtons from './CtaButtons';
+import { htmlToReact, withPrefix } from "../utils";
+import CtaButtons from "./CtaButtons";
 import styled from "styled-components";
 
 const BgDiv = styled.section`
@@ -22,7 +22,7 @@ const BgDiv = styled.section`
       border-radius: 0px;
     }
 
-  .cell{
+  .cell {
     padding-left: 0px;
     margin-bottom: 10px;
   }
@@ -45,10 +45,10 @@ const SCWIndexDiv = styled.div`
     margin-top: 11px;
     margin-bottom: 0px;
     color: black;
-    font-size:  30px;
-    line-height:  24px;
+    font-size: 30px;
+    line-height: 24px;
   }
-  .block-copy-1{
+  .block-copy-1 {
     font-weight: 300;
     line-height: 21px;
     font-size: 13px;
@@ -56,15 +56,15 @@ const SCWIndexDiv = styled.div`
     margin-bottom: 27px;
     color: black;
   }
-  .block-copy-2{
+  .block-copy-2 {
     font-weight: 900;
     line-height: 24px;
     font-size: 12px;
     margin-bottom: 11px;
     color: black;
+    text-transform: uppercase;
   }
-  .ctaswift-img{
-    
+  .ctaswift-img {
   }
 `;
 
@@ -103,9 +103,9 @@ export default class SectionCtaSwift extends React.Component {
                         alt={_.get(section, "image_alt", null)}
                     /> 
                   </SCWIndexDiv>
-                </div>
-              </div>
-            </BgDiv>
-        );
-    }
+          </div>
+        </div>
+      </BgDiv>
+    );
+  }
 }

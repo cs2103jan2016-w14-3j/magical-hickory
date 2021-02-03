@@ -521,10 +521,64 @@ models:
         items:
           type: model
           models:
-            - 
+            - action
+  section_cta_common:
+    type: object
+    label: Common Call to Action Section for non frontpage
+    extends:
+      - section
+    fields:
+      - type: string
+        name: title
+        label: Main Title
+        description: The main title of the section
+      - type: string
+        name: subtitle_1
+        label: Subtitle
+        description: The subtitle of the section
+      - type: string
+        name: subtitle_2
+        label: Subtitle
+        description: The subtitle of the section
+      - type: image
+        name: image
+        label: Image
+        description: Feature image
+      - type: list
+        name: actions
+        label: Action Buttons
+        items:
+          type: model
+          models:
+            - action
   partnership_swift:
     type: object
     label: Partnership secton for Swift
+    extends:
+      - section
+    fields:
+      - type: string
+        name: title
+        label: Main Title
+        description: The main title of the section
+      - type: string
+        name: subtitle_1
+        label: Subtitle
+        description: The subtitle of the section
+      - type: image
+        name: image
+        label: Image
+        description: Feature image
+      - type: list
+        name: actions
+        label: Action Buttons
+        items:
+          type: model
+          models:
+            - action
+    solutions:
+    type: object
+    label: Solutions secton for Swift
     extends:
       - section
     fields:

@@ -37,7 +37,6 @@ sections:
             text_color: black
             has_border: true
             border: black
-            arrow_color: black
     grid_items:
         - image: images/themes_1.svg
           image_alt: themes logo

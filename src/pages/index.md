@@ -11,6 +11,9 @@ sections:
       - label: Get in touch
         url: /features
         style: primary
+        has_icon: true
+        icon: arrow-right
+        icon_position: right
         border: white
   - section_id: how-we-work
     title: How We Work
@@ -169,16 +172,11 @@ sections:
         has_icon: true
         icon: arrow-right
         icon_position: right
-        icon_color: black
+        icon_color: '006E74'
         background_color: white
         text_color: black
         has_border: true
         border: black
-        arrow_color: black
-  # - section_id: recent-posts
-  #    type: section_posts
-  #    background: gray
-  #    title: Latest Posts
 meta_title: Stackbit Azimuth Theme
 meta_description: The preview of the Azimuth theme
 template: landing

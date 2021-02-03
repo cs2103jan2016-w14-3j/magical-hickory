@@ -50,7 +50,7 @@
   a {
     font-size: 15px;
     font-weight: bold;
-    margin: 0 0.375em 1.125em;
+    margin: 0 0.375em 1.125em 0em;
 
     .font-fira-sans & {
       font-weight: 600;
@@ -278,6 +278,11 @@
     font-weight: 800;
     font-size: 12px;
     line-height: 24px;
+    color: #231f20;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
 
     &:last-child {
       margin-bottom: 1.66667em;
@@ -354,6 +359,21 @@
   .card {
     height: 100%;
   }
+}
+
+#approach{
+  .offerings-block{
+    .block-title{
+      margin: 1.5em 0 1.5em 0em;
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 24px;
+    }
+  }
+}
+
+#amplify.outer{
+    padding: 0em 4vw 3em 4vw;
 }
 
 @media only screen and (min-width: 901px) {
@@ -589,6 +609,11 @@
     font-weight: 800;
     font-size: 12px;
     line-height: 24px;
+    color: #231f20;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
 
     &:last-child {
       margin-bottom: 1.66667em;
@@ -653,7 +678,7 @@
     }
   }
   .industry-footer {
-    width: 93% !important;
+    width: 92% !important;
   }
 
   .block-content {
@@ -683,6 +708,11 @@
     font-weight: 800;
     font-size: 12px;
     line-height: 24px;
+    color: #231f20;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
 
     &:last-child {
       margin-bottom: 1.66667em;

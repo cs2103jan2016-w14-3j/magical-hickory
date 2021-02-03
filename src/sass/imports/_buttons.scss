@@ -38,5 +38,14 @@
   &.secondary {
     background: #f7f7f1 !important;
     color: black !important;
+    border: none !important;
+  }
+
+  &.transparent {
+    background: transparent !important;
+    color: black !important;
+    border: none !important;
+    font-size: 13px;
+    line-height: 16px;
   }
 }

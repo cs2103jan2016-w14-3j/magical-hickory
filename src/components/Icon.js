@@ -8,7 +8,7 @@ export default class Icon extends React.Component {
         let action = _.get(this.props, 'action', null);
         let icon_color = action.icon_color;
         return (
-            <svg className="icon" viewBox="0 0 24 24" style={{fill: icon_color|| "white"}} xmlns="http://www.w3.org/2000/svg">
+            <svg className="icon" viewBox="0 0 24 24" style={{fill: '#'+icon_color|| "white"}} xmlns="http://www.w3.org/2000/svg">
               {(icon === 'arrow-left') ? (
               <path d="M5.945 10.522v-4.506l-5.984 5.984 5.984 5.984v-4.506h18.094v-2.957h-18.094z" />
               ) : ((icon === 'arrow-right') ? (
