@@ -18,11 +18,17 @@ const BannerDiv = styled.div`
   margin: auto;
   padding: 0 50px;
   max-width: 1024px;
+  height: 430px;
   @media only screen and (max-width: 801px) {
     flex-wrap: wrap;
     height: 580px;
     padding: 0 25px;
+    padding-top: 30px;
+    &.Solutions{
+      padding-top: 50px;
+    }
   }
+
 `;
 
 const InfoboxDiv = styled.div`
@@ -85,11 +91,11 @@ const InfoboxDiv = styled.div`
 `;
 
 const BannerImg = styled.img`
-  width: 350px;
-  height: 250px;
+  width: 380px;
+  height: 300px;
   position: relative;
   top: 120px;
-  left: -20px;
+  left: 80px;
   @media only screen and (max-width: 801px) {
     position: relative;
     top: 80px;
@@ -103,9 +109,11 @@ export default class SectionHero extends React.Component {
   render() {
     let section = _.get(this.props, "section", null);
     let content = _.get(section, "content", null);
+    let title = _.get(this.props, "pageContext.frontmatter.title", null)
+    console.log('title is ', title)
     return (
       <OuterDiv>
-        <BannerDiv>
+        <BannerDiv className={title}>
           <InfoboxDiv>
             {_.get(section, "pageTitle", null) && (
               <div className="banner-page-title">

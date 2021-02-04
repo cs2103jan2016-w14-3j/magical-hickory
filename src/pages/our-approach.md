@@ -38,13 +38,8 @@ sections:
         image_alt: SPEED THROUGH TEMPLATES
         content: |-
           Why start from scratch? Get ready made customizable webpage designs and useful tools to build your websites and grow your ideal business.
-      - title: SEAMLESS PERSONALIZATION
-        image: images/ourapproach_cyber.svg
-        image_alt: SEAMLESS PERSONALIZATION
-        content: |-
-          Worry-free performance and scalability with personalization, with our Plug and Play architecture. You can measure personalization effectiveness using Google Analytics or your preferred analytics tool.
       - title: SECURITY
-        image: images/ourapproach_scalable.svg
+        image: images/ourapproach_cyber.svg
         image_alt: SECURITY
         content: |-
           Protect workloads across your web enviornments with intelligent security services backed by cybersecurity professionals. Use built-in resilience to avoid costly business interruptions.

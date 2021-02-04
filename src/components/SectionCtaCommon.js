@@ -30,7 +30,7 @@ const BgDiv = styled.section`
     margin-bottom: 10px;
   }
 
-  @media (max-width:801px){
+  @media only screen (max-width:801px){
       &.outer.custom{
         padding-top: 10px;
       }
@@ -83,6 +83,12 @@ const SCCIndexDiv = styled.div`
     padding-top: 70px;
     padding-right: 60px;
     width:50%;  
+  }
+
+  @media only screen and (max-width:801px){
+    .ctacommon-img-div {
+      display: none;
+    }
   }
 `;
 

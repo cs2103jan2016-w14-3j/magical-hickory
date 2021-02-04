@@ -16,13 +16,13 @@ const StyledTab = styled.li`
     border-bottom: 2px solid white;
   }
 
-  @media (max-width:801px){
+  @media only screen and (max-width:801px){
   &.tab-list-item {
       margin: 0.8em 0em 0.5em 1.5em;
     }
   }
 
-  @media (max-width:1500px){
+  @media only screen and (max-width:1500px){
     &.tab-list-item {
         margin: 0.8em 0em 0.5em 1.5em;
       }

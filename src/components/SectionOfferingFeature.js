@@ -19,6 +19,10 @@ const FeatureTitle = styled.h2`
   margin: auto;
   padding: 20px 0;
   padding-bottom: 100px;
+
+  @media only screen and (max-width: 801px) {
+    padding-bottom: 20px;
+  }
 `;
 
 const InnerDiv = styled.div`
@@ -66,7 +70,8 @@ const InnerDiv = styled.div`
       flex-wrap: wrap;
       flex-direction: column;
       width: 100%;
-
+      padding-top: 0px;
+      
       .feature-image {
         width: 100%;
       }
