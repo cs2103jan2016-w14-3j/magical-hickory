@@ -4,6 +4,7 @@ sections:
   - section_id: hero
     type: section_hero
     image: images/innovation_frontpage.png
+    multiple_images: false
     image_alt: App preview
     title: Driving Innovation at Speed and Scale
     content: null

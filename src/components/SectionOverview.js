@@ -3,15 +3,39 @@ import _ from "lodash";
 import styled from "styled-components";
 import { htmlToReact, withPrefix } from "../utils";
 
+const MainSection = styled.section`
+  &.bg-F2F7F8{
+    background-color: #F2F7F8;
+    }
+`;
+
 const InnerDiv = styled.div`
   max-width: 1024px;
   margin: auto;
 `;
+
+const OverviewIndexDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+
+  .overview-index {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 40px;
+    color: black;
+    margin-right: 10px;
+  }
+`;
+
+
 export default class SectionOverview extends React.Component {
   render() {
     let section = _.get(this.props, "section", null);
+    const section_id = _.get(section, "section_id", null);
     return (
-      <section
+      <MainSection
         id={_.get(section, "section_id", null)}
         className={
           "block overview-block bg-" +
@@ -34,7 +58,7 @@ export default class SectionOverview extends React.Component {
             // <div className="">
             <div className="grid">
               {_.map(_.get(section, "reviews", null), (review, review_idx) => (
-                <div className="cell overview">
+                <div key={review_idx} className="cell overview">
                   {_.get(review, "background", null) && (
                     <img
                       className="overview-avatar"
@@ -44,12 +68,15 @@ export default class SectionOverview extends React.Component {
                   )}
 
                   <footer className="overview-footer">
-                    <p className="overview-text">
-                      {htmlToReact(_.get(review, "title", null))}
-                    </p>
-                    <p className="overview-subtitle">
-                      {htmlToReact(_.get(review, "content", null))}
-                    </p>
+                     {_.get(review, "title", null) && (<p className="overview-text">
+                        {htmlToReact(_.get(review, "title", null))}
+                      </p>)}
+                    <OverviewIndexDiv>
+                    <div className="overview-index">{ section_id === "swifthome" ? review_idx + 1 : ""}</div>
+                      <p className="overview-subtitle">
+                        {htmlToReact(_.get(review, "content", null))}
+                      </p>
+                    </OverviewIndexDiv>
                   </footer>
                 </div>
               ))}
@@ -57,7 +84,7 @@ export default class SectionOverview extends React.Component {
             // </div>
           )}
         </InnerDiv>
-      </section>
+      </MainSection>
     );
   }
 }

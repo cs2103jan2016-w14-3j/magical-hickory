@@ -4,7 +4,6 @@ import styled from "styled-components";
 import CustomTabs from './customtabs';
 import { htmlToReact, withPrefix, classNames } from "../utils";
 import SectionCtaSwift from './SectionCtaSwift';
-import Action from './Action';
 
 const BgDiv = styled.section`
     .block-title{

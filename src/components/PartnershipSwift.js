@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { htmlToReact, withPrefix } from "../utils";
 
 const BgDiv = styled.section`
+
   .partnershipswift-cell {
     box-sizing: border-box;
     padding-left: 0.8333rem;
@@ -29,6 +30,11 @@ const BgDiv = styled.section`
     text-align: left;
     padding-top: 80px;
 
+    @media only screen and (max-width: 801px){
+      padding-top: 20px;
+      padding-bottom: 5px;
+    }
+
     .partnershipswift-block {
       text-align: left;
       padding-top: 40px;
@@ -36,6 +42,7 @@ const BgDiv = styled.section`
 
       @media only screen and (max-width: 801px){
         margin-bottom: 60px;
+        padding-top: 20px;
       }
     }
     .block-subtitle {

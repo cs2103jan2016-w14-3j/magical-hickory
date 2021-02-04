@@ -8,8 +8,8 @@
         "has_nav": true,
         "nav_links": [
             {
-                "label": "Offerings",
-                "url": "/offerings",
+                "label": "Swift",
+                "url": "/swiftindex",
                 "style": "link"
             },
             {
