@@ -11,6 +11,7 @@ const BgDiv = styled.section`
     }
     &.outer.custom{
       padding-top: 30px;
+      margin-bottom: 50px;
     }
     &.background-F7F7F1{
       background-color: #F7F7F1;
@@ -27,9 +28,10 @@ const BgDiv = styled.section`
     margin-bottom: 10px;
   }
 
-  @media (max-width:801px){
+  @media only screen and (max-width:801px){
       &.outer.custom{
         padding-top: 10px;
+        margin-bottom: 20px;
       }
     }
 
@@ -64,7 +66,16 @@ const SCWIndexDiv = styled.div`
     color: black;
     text-transform: uppercase;
   }
-  .ctaswift-img {
+  @media only screen and (max-width:801px){
+    width: 70%;
+    .block-copy-1 {
+      font-weight: 50;
+      line-height: 24px;
+      font-size: 15px;
+      margin-top: 0px;
+      margin-bottom: 15px;
+      color: black;
+    }
   }
 `;
 
@@ -73,7 +84,6 @@ export default class SectionCtaSwift extends React.Component {
       console.log(this.props)
         const section = _.get(this.props, 'custom', null) || _.get(this.props, 'section', null)
         const custom = _.get(section, 'custom', null );
-        console.log('custom is ', custom)
         let background_color = section.background_color;
         return (
             <BgDiv id={_.get(section, 'section_id', null)} className={ "background-"+background_color + " block cta-block outer " + _.get(section, 'custom', '')}>

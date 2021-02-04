@@ -89,6 +89,9 @@ const SCCIndexDiv = styled.div`
     .ctacommon-img-div {
       display: none;
     }
+    h2.block-title{
+      line-height: 30px;
+    }
   }
 `;
 

@@ -15,65 +15,39 @@ sections:
         has_icon: true
         icon: arrow-right
         icon_position: right
-  - section_id: approach
-    type: section_offering 
-    title: Introducing our ABCD approach
-    subtitle:
-    content: >-
-
-    button: Learn more
-    extra: 
-    background: grey
-    reviews:
-      - title: Architect
-        subtitle: >-
-          Create or templify existing design system and technical compliances.
-        illustration: images/architect.svg
-        type: offerings_item
-      - title: BYOS
-        subtitle: >-
-          Bring your own serverless (BYOS) stack or host with us.
-        illustration: images/serverless.svg
-        type: offerings_item
-      - title: Customize
-        subtitle: >-
-          Decide how many custom themes needed based on your needs.
-        illustration: images/customize.svg
-        type: offerings_item
-      - title: Deploy
-        subtitle: >-
-          Start migrating or deploying and see the immediate cost, performance and security benefits!
-        illustration: images/deploy.svg
-        type: offerings_item   
-  - section_id: amplify
+  - section_id: features
     type: section_offering_feature
     background: gray
-    title: Built to amplify your impact
+    title: 5Ss in our Game Plan
     subtitle: >-
-     
+
     features:
-      - title: ARCHITECT
-        image: images/amplify_1.svg
-        image_alt: App preview on a phone and tablet
+      - title: SERVERLESS
+        image: images/ourapproach_serverless.svg
+        image_alt: Serverless
         content: |-
-          Create or Templify existing design system and technical compliances. <br> Ready to take the next step? Our SwiftSight solution enables customers to deploy repeatable templates from any existing design system. No design system yet? Let our digital UI/UX team help you co-create one that will act as the foundation to all your existing/future website needs.    
-      - title: BYOS
-        image: images/amplify_2.svg
-        image_alt: App users welcoming a new member
+          Our Innovation Workshops are flexible design sprints engineered to answer critical business questions through design, prototyping, and testing ideas with you.
+      - title: SPEED THROUGH TEMPLATES
+        image: images/ourapproach_template.svg
+        image_alt: Template
         content: |-
-           Bring your own serverless (BYOS) stack or host with us. Choose whether to bring your own serverless (BYOS) stack or host with us. Our pluggable solution supports easy deployment on any hosting/cloud platform such as AWS, GCP, Azure or simply deploy locally within your own datacenters 
-
-      - title: CUSTOMIZE
-        image: images/amplify_3.svg
-        image_alt: App user profile preview
+          Instead of weeks and months to deploy an app, you can do it within hours and days. The reason behind this is that you don't have to concern yourself with infrastructure. Going serverless is a greate way of cutting costs!
+        actions:
+      - title: SEAMLESS PERSONALIZATION
+        image: images/ourapproach_personalization.svg
+        image_alt: Personalization
         content: |-
-          100 websites or even 1000 websites? Decide how many custom themes needed based on your enterprise needs and our templating team will customise multiple use cases templates from the base template to suit your needs.
-
-      - title: DEPLOY   
-        image: images/amplify_4.svg
-        image_alt: App user profile preview
+          Why start from scratch? Get ready made customizable webpage designs and useful tools to build your websites and grow your ideal business.
+      - title: SECURITY
+        image: images/ourapproach_cyber.svg
+        image_alt: SECURITY
         content: |-
-          Start migration or deploying and see the immediate cost, performance and security benefits! Results from our approach have shown more than 10x gains in any of the metric. We'll work with you step-by-step to harness the value of edge-computing.
+          Protect workloads across your web enviornments with intelligent security services backed by cybersecurity professionals. Use built-in resilience to avoid costly business interruptions.
+      - title: SCALABLE
+        image: images/ourapproach_scalable.svg
+        image_alt: SCALABLE
+        content: |-
+          Increase agility with SwiftSight structure that scales to your business needs. Reduce operational burden with fully managed application and database service in SwiftSight.
   - section_id: call-to-action_common
     custom: ''
     type: section_cta_common

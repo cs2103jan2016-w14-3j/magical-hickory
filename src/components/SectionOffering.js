@@ -6,7 +6,14 @@ import { htmlToReact, withPrefix } from "../utils";
 const InnerDiv = styled.div`
   max-width: 1024px;
   margin: auto;
+
+  @media only screen and (max-width: 801px){
+       .offerings-block h2.block-title{
+        line-height: 45px;
+      }
+  }
 `;
+
 const OfferingIndexDiv = styled.div`
   display: flex;
   flex-direction: row;

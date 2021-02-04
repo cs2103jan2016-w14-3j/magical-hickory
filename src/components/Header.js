@@ -7,7 +7,7 @@ import Action from "./Action";
 export default class Header extends React.Component {
   render() {
     return (
-      <header id="masthead" className="site-header">
+      <header id="masthead" className="site-header outer">
         <div className="inner">
           <div className="site-header-inside">
             <div className="site-branding">
@@ -95,9 +95,11 @@ export default class Header extends React.Component {
                     <div className="site-nav-inside">
                       <button id="menu-close" className="menu-toggle">
                         <span className="screen-reader-text">Open Menu</span>
-                        <span className="icon-close" aria-hidden="true" />
+                        <span className="icon-close" aria-hidden="true1" />
                       </button>
+                    
                       <ul className="menu">
+                          {/* getting nav links in sitemetadata.json */}
                         {_.map(
                           _.get(
                             this.props,

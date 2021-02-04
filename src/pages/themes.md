@@ -9,15 +9,25 @@ sections:
     tab_title: "Themes:"
     tab_background: 1D242C
     tab_items: 
-        - title: ALL THEMES
-        - title: BUSINESS
-        - title: LEARNING
-        - title: PRODUCT
-        - title: PORTFOLIO
-        - title: PERSONAL
-        - title: EVENT
-        - title: BLOG
-        - title: CUSTOM
+        - label: ALL THEMES
+          subtitle_1: Beautiful and responsive themes created by our designers which are ready to launch immediately and are fully customizable.
+          style: link
+        - label: BUSINESS
+          style: link
+        - label: LEARNING
+          style: link
+        - label: PRODUCT
+          style: link
+        - label: PORTFOLIO
+          style: link
+        - label: PERSONAL
+          style: link
+        - label: EVENT
+          style: link
+        - label: BLOG
+          style: link
+        - label: CUSTOM
+          style: link
     custom:
         section_id: call-to-action
         custom: custom

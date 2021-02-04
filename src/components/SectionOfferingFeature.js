@@ -46,7 +46,7 @@ const InnerDiv = styled.div`
 
     .content-container {
       flex: 1;
-      padding-right: 20px;
+      padding-right: 60px;
 
       .feature-title {
         font-weight: 800;

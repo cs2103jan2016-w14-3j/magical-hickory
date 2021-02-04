@@ -2,7 +2,7 @@
     "base_font": "fort-sans",
     "palette": "cyan",
     "header": {
-        "logo_img": "images/innovation_logo.svg",
+        "logo_img": "images/swiftsightlogo.svg",
         "company_logo_img": "images/ust_logo.png",
         "logo_img_alt": "Logo",
         "has_nav": true,
@@ -38,8 +38,8 @@
                 "style": "secondary"
             },
             {
-                "label": "Our Approach",
-                "url": "/our-approach",
+                "label": "Approach",
+                "url": "/approach",
                 "style": "link"
             }
 

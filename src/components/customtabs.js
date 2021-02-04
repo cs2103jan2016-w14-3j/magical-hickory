@@ -11,6 +11,14 @@ const StyledOl = styled.div`
       margin-left: 30px;
     }
 
+    @media only screen and (max-width: 801px){
+      ol.tab-list{
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+      }
+    }
+
 `;
 
 export default class CustomTabs extends Component {
@@ -20,10 +28,11 @@ export default class CustomTabs extends Component {
       }
   
       state = {
-          activeTab: this.props.children[0].props.label,
+          activeTab: "All themes"
       };
       
       onClickTabItem = (tab) => {
+
         this.setState({ activeTab: tab });
         let newTab = tab.charAt(0).toUpperCase() + tab.slice(1).toLowerCase();
         this.props.tellParent(newTab);

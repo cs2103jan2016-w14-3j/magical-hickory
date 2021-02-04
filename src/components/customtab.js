@@ -13,22 +13,24 @@ const StyledTab = styled.li`
     cursor: pointer;
   }
   &.tab-list-active {
-    border-bottom: 2px solid white;
+    text-decoration: underline 2px solid white;
+    
   }
-
   @media only screen and (max-width:801px){
   &.tab-list-item {
-      margin: 0.8em 0em 0.5em 1.5em;
+      margin: 1em 0.3em 1em 0.3em;
     }
   }
 
-  @media only screen and (max-width:1500px){
-    &.tab-list-item {
-        margin: 0.8em 0em 0.5em 1.5em;
-      }
-    }
+
 `
 
+/*  @media only screen and (max-width:1500px){
+  &.tab-list-item {
+    margin: 0.8em 0em 0.5em 1.5em;
+    border-bottom: 2px solid white;
+  }
+}*/
 class CustomTab extends React.Component {
      static propTypes = {
       activeTab: PropTypes.string.isRequired,
