@@ -1,11 +1,16 @@
 import React from "react";
 import _ from "lodash";
 
-import { htmlToReact, withPrefix } from "../utils";
+import { htmlToReact, withPrefix, classNames } from "../utils";
 import CtaButtons from "./CtaButtons";
 import styled from "styled-components";
 
 const BgDiv = styled.section`
+
+    &#call-to-action-common-about.outer{
+      padding-top: 0px;
+    }
+
     .inner-large{
       padding: 2vw;
     } 
@@ -35,7 +40,7 @@ const BgDiv = styled.section`
         padding-top: 10px;
       }
     }
-
+  
 `;
 
 const SCCInnerDiv = styled.div`
@@ -44,6 +49,27 @@ const SCCInnerDiv = styled.div`
     align-items: left;
     justify-content: space-between;
 
+    &.call-to-action-common-about{
+      flex-direction: row;
+      .cell.giblock-buttons .button{
+        margin-left:auto;
+      }
+      .content-portion{
+        margin-right: 50px;
+        width: 800px;
+      }
+
+      @media only screen and (max-width:801px){
+        .content-portion{
+          width: 100%;
+          text-align: left;
+          margin-right: 0px;
+        }
+        flex-direction: column;
+        align-items: center;
+       
+      }
+    }
 `;
 
 const SCCIndexDiv = styled.div`
@@ -58,7 +84,7 @@ const SCCIndexDiv = styled.div`
     margin-bottom: 0px;
     color: black;
     font-size: 30px;
-    line-height: 24px;
+    line-height: 28px;
   }
   .block-copy-1 {
     font-weight: 300;
@@ -97,34 +123,37 @@ const SCCIndexDiv = styled.div`
 
 export default class SectionCtaCommon extends React.Component {
     render() {
-      console.log(this.props)
-        const section = _.get(this.props, 'custom', null) || _.get(this.props, 'section', null)
+        const section = _.get(this.props, 'custom', null) || _.get(this.props, 'section', null);
+        const section_id = _.get(section, 'section_id', null);
         const custom = _.get(section, 'custom', null );
         let background_color = section.background_color;
+        const image = _.get(section, 'image', null);
         return (
             <BgDiv id={_.get(section, 'section_id', null)} className={ "background-"+background_color + " block cta-common-block outer " + _.get(section, 'custom', '')}>
               <div className="inner-large">
-                
                 <SCCIndexDiv> 
-                  <div className ="ctacommon-img-div"> 
+                  {image && <div className ="ctacommon-img-div"> 
                     <img className="ctacommon-img"
                         src={withPrefix(_.get(section, "image", null))}
                         alt={_.get(section, "image_alt", null)}
                     /> 
                     </div>
-                   <SCCInnerDiv>
-                    {_.get(section, 'subtitle_2', null) && (
-                      <p className="block-copy-2">{_.get(section, 'subtitle_2', null)}</p>
-                      )}
-                      {_.get(section, 'title', null) && (
-                      <h2 className="block-title">{_.get(section, 'title', null)}</h2>
-                      )}
-                      {_.get(section, 'subtitle_1', null) && (
-                      <p className="block-copy-1">
-                        {/* use htmlToReact to translate html to jsx */}
-                        {htmlToReact(_.get(section, 'subtitle_1', null))}
-                      </p>
-                      )}
+                  }
+                   <SCCInnerDiv className={classNames({"call-to-action-common-about": section_id === 'call-to-action-common-about'})}>
+                    <div className="content-portion">
+                      {_.get(section, 'subtitle_2', null) && (
+                        <p className="block-copy-2">{_.get(section, 'subtitle_2', null)}</p>
+                        )}
+                        {_.get(section, 'title', null) && (
+                        <h2 className="block-title">{_.get(section, 'title', null)}</h2>
+                        )}
+                        {_.get(section, 'subtitle_1', null) && (
+                        <p className="block-copy-1">
+                          {/* use htmlToReact to translate html to jsx */}
+                          {htmlToReact(_.get(section, 'subtitle_1', null))}
+                        </p>
+                        )}
+                      </div>
                       {/* both conditions must be fullfilled for jsx */ }
                       {_.get(section, 'actions', null) && (
                       <div className="cell block-buttons">

@@ -48,7 +48,7 @@ sections:
         image_alt: SCALABLE
         content: |-
           Increase agility with SwiftSight structure that scales to your business needs. Reduce operational burden with fully managed application and database service in SwiftSight.
-  - section_id: call-to-action_common
+  - section_id: call-to-action-common
     custom: ''
     type: section_cta_common
     title: Reaching your Objectives & more

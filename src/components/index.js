@@ -28,6 +28,7 @@ import SectionCta from "./SectionCta";
 import PartnershipSwift from "./PartnershipSwift";
 import ThemesSwift from "./ThemesSwift";
 import SectionCtaCommon from "./SectionCtaCommon";
+import AboutMission from "./AboutMission";
 
 export {
   Action,
@@ -59,7 +60,8 @@ export {
   SectionCtaSwift,
   PartnershipSwift,
   ThemesSwift,
-  SectionCtaCommon
+  SectionCtaCommon,
+  AboutMission
 };
 
 export default {
@@ -92,5 +94,6 @@ export default {
   SectionCtaSwift,
   PartnershipSwift,
   ThemesSwift,
-  SectionCtaCommon
+  SectionCtaCommon,
+  AboutMission
 };

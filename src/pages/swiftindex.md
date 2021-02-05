@@ -17,8 +17,8 @@ sections:
         border: white
   - section_id: swifthome
     type: section_overview
-    title: Top Problems Faced
-    subtitle: WHEN CREATING WEBSITES
+    title: The Mission
+    subtitle: OUR OBJECTIVE
     background: F2F7F8
     reviews:
       - title:

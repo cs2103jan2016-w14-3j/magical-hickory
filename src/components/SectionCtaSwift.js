@@ -82,8 +82,10 @@ const SCWIndexDiv = styled.div`
 export default class SectionCtaSwift extends React.Component {
     render() {
       console.log(this.props)
-        const section = _.get(this.props, 'custom', null) || _.get(this.props, 'section', null)
+        const section = _.get(this.props, 'custom', null) || _.get(this.props, 'section', null);
+        // custom is for swift theme's custom tab
         const custom = _.get(section, 'custom', null );
+        console.log('custom is ', custom);
         let background_color = section.background_color;
         return (
             <BgDiv id={_.get(section, 'section_id', null)} className={ "background-"+background_color + " block cta-block outer " + _.get(section, 'custom', '')}>

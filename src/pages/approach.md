@@ -74,7 +74,7 @@ sections:
         image_alt: App user profile preview
         content: |-
           Start migration or deploying and see the immediate cost, performance and security benefits! Results from our approach have shown more than 10x gains in any of the metric. We'll work with you step-by-step to harness the value of edge-computing.
-  - section_id: call-to-action_common
+  - section_id: call-to-action-common
     custom: ''
     type: section_cta_common
     title: We are ready when you are
