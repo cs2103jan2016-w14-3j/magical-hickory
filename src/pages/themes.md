@@ -51,6 +51,7 @@ sections:
         - image: images/themes_1.svg
           image_alt: themes logo
           image_align: center
+          url: 
         - image: images/themes_1.svg
           image_alt: themes logo
           image_align: center

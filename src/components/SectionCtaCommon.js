@@ -51,7 +51,7 @@ const SCCInnerDiv = styled.div`
 
     &.call-to-action-common-about{
       flex-direction: row;
-      .cell.giblock-buttons .button{
+      .cell.block-buttons .button{
         margin-left:auto;
       }
       .content-portion{
