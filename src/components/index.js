@@ -10,6 +10,7 @@ import FormField from "./FormField";
 import Header from "./Header";
 import Icon from "./Icon";
 import SectionContact from "./SectionContact";
+import SectionContactNew from "./SectionContactNew";
 import SectionContent from "./SectionContent";
 import SectionFaq from "./SectionFaq";
 import SectionFeatures from "./SectionFeatures";
@@ -57,7 +58,8 @@ export {
   SectionCta,
   SectionCtaSwift,
   PartnershipSwift,
-  ThemesSwift
+  SectionContactNew,
+  ThemesSwift,
 };
 
 export default {
@@ -89,5 +91,6 @@ export default {
   Layout,
   SectionCtaSwift,
   PartnershipSwift,
-  ThemesSwift
+  SectionContactNew,
+  ThemesSwift,
 };

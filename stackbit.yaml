@@ -521,7 +521,7 @@ models:
         items:
           type: model
           models:
-            - 
+            -
   partnership_swift:
     type: object
     label: Partnership secton for Swift
@@ -994,6 +994,54 @@ models:
         name: content
         label: Content
   section_contact:
+    type: object
+    label: Contact Section
+    extends:
+      - section
+    fields:
+      - type: string
+        name: subtitle
+        label: Subtitle
+        description: The text shown below the title
+      - type: markdown
+        name: content
+        label: Content
+        description: "the content of the section, appears above the form"
+      - type: enum
+        name: background
+        label: Background
+        description: The background of the section
+        options:
+          - gray
+          - white
+        default: gray
+      - type: string
+        name: form_id
+        label: Form ID
+        description: "A unique identifier of the form, must not contain whitespace"
+        required: true
+      - type: string
+        name: form_action
+        label: Form Action
+        description: >-
+          The path of your custom "success" page, if you want to replace the
+          default success message.
+      - type: boolean
+        name: hide_labels
+        label: Hide labels of the form fields?
+        default: false
+      - type: list
+        name: form_fields
+        label: Form Fields
+        items:
+          type: model
+          models:
+            - form_field
+      - type: string
+        name: submit_label
+        label: Submit Button Label
+        required: true
+  section_contact_new:
     type: object
     label: Contact Section
     extends:

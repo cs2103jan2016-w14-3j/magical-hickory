@@ -1,11 +1,13 @@
 import React from "react";
 import _ from "lodash";
-
+import { Link as ScrollLink } from "react-scroll";
 import { Link, withPrefix, classNames } from "../utils";
 import Action from "./Action";
 
 export default class Header extends React.Component {
   render() {
+    const pathname = window.location.pathname;
+    console.log(pathname);
     return (
       <header id="masthead" className="site-header outer">
         <div className="inner">
@@ -121,9 +123,26 @@ export default class Header extends React.Component {
                                 className={classNames("menu-item", {
                                   "current-menu-item": page_url === action_url,
                                   "menu-button": action_style !== "link",
+                                  button: action_style !== "link",
+                                  secondary: action_style !== "link",
                                 })}
                               >
-                                <Action {...this.props} action={action} />
+                                {action_style !== "link" && pathname === "/" && (
+                                  <ScrollLink
+                                    to="contact"
+                                    spy={true}
+                                    smooth={true}
+                                  >
+                                    Contact Us
+                                  </ScrollLink>
+                                )}
+                                {action_style !== "link" &&
+                                  pathname !== "/" && (
+                                    <Action {...this.props} action={action} />
+                                  )}
+                                {action_style === "link" && (
+                                  <Action {...this.props} action={action} />
+                                )}
                               </li>
                             );
                           }
