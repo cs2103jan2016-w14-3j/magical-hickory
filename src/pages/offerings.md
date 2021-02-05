@@ -12,49 +12,76 @@ sections:
       - label: Get in touch
         url: /features
         style: primary
+        has_icon: true
+        icon: arrow-right
+        icon_position: right
   - section_id: features
-    type: section_features
+    type: section_offering_feature
     background: gray
-    title: Features
+    title: Our Offerings
     subtitle: >-
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus quis lorem malesuada luctus.
     features:
-      - title: The Best Feature of Your Services
-        image: images/feature1.png
+      - title: Innovation Workshops
+        image: images/innovation_workshop.png
         image_alt: App preview on a phone and tablet
         content: |-
-          Nam pulvinar ante eu ultricies volutpat. Aenean hendrerit, eros sed aliquet luctus, lorem risus volutpat dolor, nec dignissim diam neque consequat ex.
+          Our Innovation Workshops are flexible design sprints engineered to answer critical business questions through design, prototyping, and testing ideas with you.
         actions:
-          - label: Learn More
+          - label: Get in touch
             url: "/features"
-            style: secondary
+            style: transparent
             has_icon: true
             icon: arrow-right
             icon_position: right
-      - title: Awesome Feature of Your Services
-        image: images/feature2.png
+            has_border: true
+            border: black
+            icon_color: '006E74'
+      - title: Lean Solution Design
+        image: images/lean_solution_design.png
         image_alt: App users welcoming a new member
         content: |-
-          Etiam vel urna sed massa egestas vulputate eu a velit. Sed ut nisl nec sapien interdum luctus. Cras rhoncus condimentum metus sit amet auctor.
+          Through Lean Solution Design, we will analyse, propose and determine technologies that will be involved in actionable plans that solve your every business requirements identified.
         actions:
-          - label: Learn More
+          - label: Get in touch
             url: "/features"
-            style: secondary
+            style: transparent
             has_icon: true
             icon: arrow-right
             icon_position: right
-      - title: Cool Feature of Your Services
-        image: images/feature3.png
+            has_border: true
+            border: black
+            icon_color: '006E74'
+      - title: Rapid Prototyping
+        image: images/rapid_prototyping.png
         image_alt: App user profile preview
         content: |-
-          In ante enim, lobortis quis congue vel, finibus sit amet mi. Aenean quis venenatis sem. Proin eget massa id metus eleifend maximus sit amet nec urna.
+          We utilise liquid assembly and low-no code implementation to iteratively churn out sufficiently complex solutions in short time spans, reaching potential solutions early and at minimal costs.
         actions:
-          - label: Learn More
+          - label: Get in touch
             url: "/features"
-            style: secondary
+            style: transparent
             has_icon: true
             icon: arrow-right
             icon_position: right
+            has_border: true
+            border: black
+            icon_color: '006E74'
+      - title: Prove-it Pilot
+        image: images/prove_it_pilot.png
+        image_alt: App user profile preview
+        content: |-
+          Our Prove-it Pilots are a process of continuous innovation by iteratively designing and delivering validated innovation solution through rapid iterative development and data driven experimentation.
+        actions:
+          - label: Get in touch
+            url: "/features"
+            style: transparent
+            has_icon: true
+            icon: arrow-right
+            icon_position: right
+            has_border: true
+            border: black
+            icon_color: '006E74'
   # - section_id: features
   #   type: section_content
   #   background: gray

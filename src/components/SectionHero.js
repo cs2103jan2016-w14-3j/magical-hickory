@@ -1,15 +1,24 @@
 import React from "react";
 import _ from "lodash";
-
-import { withPrefix, markdownify } from "../utils";
+import styled from "styled-components";
+import { withPrefix, classNames } from "../utils";
 import CtaButtons from "./CtaButtons";
 
+const HeroImg = styled.img`
+    &.hero-img{
+      
+    }
+
+`;
+
 export default class SectionHero extends React.Component {
+
   render() {
     let section = _.get(this.props, "section", null);
     return (
-      <div className="hero-container">
-        <img
+      
+      <div id={_.get(section, "section_id", null)} className='hero-container'>
+        <HeroImg
           className="hero-img"
           src={withPrefix(_.get(section, "image", null))}
           alt={_.get(section, "image_alt", null)}
@@ -33,6 +42,7 @@ export default class SectionHero extends React.Component {
           )}
         </div>
       </div>
+  
       // <section
       //   id={_.get(section, "section_id", null)}
       //   className="section-hero block hero-block bg-accent outer"

@@ -1,8 +1,13 @@
 import React from "react";
 import _ from "lodash";
 import styled from "styled-components";
-import { withPrefix, markdownify } from "../utils";
+import { withPrefix, markdownify, classNames } from "../utils";
 import CtaButtons from "./CtaButtons";
+
+const OuterDiv = styled.div`
+  background-color: #006e74;
+  margin-bottom: 40px;
+`;
 
 const BannerDiv = styled.div`
   display: flex;
@@ -10,8 +15,20 @@ const BannerDiv = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #006e74;
-  height: 400px;
-  padding: 0 150px;
+  margin: auto;
+  padding: 0 50px;
+  max-width: 1024px;
+  height: 430px;
+  @media only screen and (max-width: 801px) {
+    flex-wrap: wrap;
+    height: 580px;
+    padding: 0 25px;
+    padding-top: 30px;
+    &.Solutions{
+      padding-top: 50px;
+    }
+  }
+
 `;
 
 const InfoboxDiv = styled.div`
@@ -29,55 +46,110 @@ const InfoboxDiv = styled.div`
     font-size: 12px;
     line-height: 24px;
     padding-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: "fort-bold";
   }
 
   .banner-title {
     color: white;
     font-size: 42px;
-    line-height: 50px;
+    font-weight: 300;
+    letter-spacing: normal;
+    line-height: 1.11;
+    font-size: 2.25rem;
+  }
+  .banner-title.content p{
+    color: white;
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: normal;
+    line-height: 1.11;
+    font-size: 2.25rem;
+    margin: 0 0 0.3em;
+  }
+  .banner-content{
+    color: white;
+  }
+  @media only screen and (max-width: 801px) {
+    height: 200px;
+    width: 100%;
+    .banner-page-title {
+      color: white;
+      font-weight: 800;
+      font-size: 15px;
+      padding-top: 60px;
+    }
+    .banner-title {
+      font-size: 30px;
+      line-height: 1.11;
+      letter-spacing: normal;
+    }
+
   }
 `;
 
 const BannerImg = styled.img`
-  width: 400px;
-  height: 288px;
+  width: 380px;
+  height: 300px;
   position: relative;
-  top: 150px;
+  top: 120px;
+  left: 80px;
+  @media only screen and (max-width: 801px) {
+    position: relative;
+    top: 80px;
+    left: 40px;
+    width: 90%;
+    height: auto;
+  }
 `;
 
 export default class SectionHero extends React.Component {
   render() {
     let section = _.get(this.props, "section", null);
+    let content = _.get(section, "content", null);
+    let title = _.get(this.props, "pageContext.frontmatter.title", null)
+    console.log('title is ', title)
     return (
-      <BannerDiv>
-        <InfoboxDiv>
-          {_.get(section, "pageTitle", null) && (
-            <div className="banner-page-title">
-              {_.get(section, "pageTitle", null)}
-            </div>
-          )}
-          {_.get(section, "title", null) && (
-            <div className="banner-title">{_.get(section, "title", null)}</div>
-          )}
-          {/* <div className="block-copy">
+      <OuterDiv>
+        <BannerDiv className={title}>
+          <InfoboxDiv>
+            {_.get(section, "pageTitle", null) && (
+              <div className="banner-page-title">
+                {_.get(section, "pageTitle", null)}
+              </div>
+            )}
+            {_.get(section, "title", null) && (
+              <div className={classNames({"banner-title": true, "content": content})}>
+                {markdownify(_.get(section, "title", null))}
+              </div>
+            )}
+            {_.get(section, "content", null) && (
+              <div className="banner-content">
+                {markdownify(_.get(section, "content", null))}
+              </div>
+            )}
+            {/* <div className="block-copy">
             {markdownify(_.get(section, "content", null))}
           </div> */}
-          {_.get(section, "actions", null) && (
-            <div className="block-buttons">
-              <CtaButtons
-                {...this.props}
-                actions={_.get(section, "actions", null)}
-              />
-            </div>
-          )}
-        </InfoboxDiv>
-        <div>
-          <BannerImg
-            src={withPrefix(_.get(section, "image", null))}
-            alt={_.get(section, "image_alt", null)}
-          />
-        </div>
-      </BannerDiv>
+            {_.get(section, "actions", null) && (
+              <div className="block-buttons">
+                <CtaButtons
+                  {...this.props}
+                  actions={_.get(section, "actions", null)}
+                />
+              </div>
+            )}
+          </InfoboxDiv>
+          <div>
+            <BannerImg
+              src={withPrefix(_.get(section, "image", null))}
+              alt={_.get(section, "image_alt", null)}
+            />
+          </div>
+        </BannerDiv>
+      </OuterDiv>
 
       // <section
       //   id={_.get(section, "section_id", null)}

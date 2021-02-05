@@ -2,19 +2,14 @@
     "base_font": "fort-sans",
     "palette": "cyan",
     "header": {
-        "logo_img": "images/innovation_logo.svg",
+        "logo_img": "images/swiftsightlogo.svg",
         "company_logo_img": "images/ust_logo.png",
         "logo_img_alt": "Logo",
         "has_nav": true,
         "nav_links": [
             {
-                "label": "Home",
-                "url": "/",
-                "style": "link"
-            },
-            {
-                "label": "Offerings",
-                "url": "/offerings",
+                "label": "Swift",
+                "url": "/swiftindex",
                 "style": "link"
             },
             {
@@ -24,14 +19,30 @@
             },
             {
                 "label": "About Us",
-                "url": "/style-guide",
+                "url": "/about",
+                "style": "link"
+            },
+            {
+                "label": "Themes",
+                "url": "/themes",
+                "style": "link"
+            },
+            {
+                "label": "Solutions",
+                "url": "/solutions",
                 "style": "link"
             },
             {
                 "label": "Contact Us",
-                "url": "/signup",
+                "url": "/contact",
                 "style": "secondary"
+            },
+            {
+                "label": "Approach",
+                "url": "/approach",
+                "style": "link"
             }
+
         ]
     },
     "footer": {

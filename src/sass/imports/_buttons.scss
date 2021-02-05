@@ -1,9 +1,9 @@
-.button {
+.button{
   -ms-flex-align: center;
   align-items: center;
-  background-color: transparent !important;
-  border: 2px solid white !important;
-  border-radius: $border-radius;
+  background-color: transparent;
+  border: 2px solid white;
+  //border-radius: $border-radius;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
@@ -38,5 +38,14 @@
   &.secondary {
     background: #f7f7f1 !important;
     color: black !important;
+    border: none !important;
+  }
+
+  &.transparent {
+    background: transparent !important;
+    color: black !important;
+    border: none !important;
+    font-size: 13px;
+    line-height: 16px;
   }
 }
