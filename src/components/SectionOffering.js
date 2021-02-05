@@ -6,7 +6,14 @@ import { htmlToReact, withPrefix } from "../utils";
 const InnerDiv = styled.div`
   max-width: 1024px;
   margin: auto;
+
+  @media only screen and (max-width: 801px){
+       .offerings-block h2.block-title{
+        line-height: 45px;
+      }
+  }
 `;
+
 const OfferingIndexDiv = styled.div`
   display: flex;
   flex-direction: row;
@@ -16,7 +23,9 @@ const OfferingIndexDiv = styled.div`
 
 export default class SectionIndustry extends React.Component {
   render() {
-    let section = _.get(this.props, "section", null);
+    const section = _.get(this.props, "section", null);
+    const section_id = _.get(section, "section_id", null);
+    const alphabet = ["A","B","C","D"];
     return (
       <section
         id={_.get(section, "section_id", null)}
@@ -51,9 +60,9 @@ export default class SectionIndustry extends React.Component {
             // <div className="">
             <div className="grid">
               {_.map(_.get(section, "reviews", null), (review, review_idx) => (
-                <div className="cell offerings">
+                <div key={review_idx} className="cell offerings">
                   <OfferingIndexDiv>
-                    <div className="offerings-index">{review_idx + 1}</div>
+                    <div className="offerings-index">{ section_id === "approach" ? alphabet[review_idx ]: review_idx + 1 }</div>
                     {_.get(review, "illustration", null) && (
                       <img
                         className="offerings-avatar"

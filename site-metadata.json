@@ -2,19 +2,14 @@
     "base_font": "fort-sans",
     "palette": "cyan",
     "header": {
-        "logo_img": "images/innovation_logo.svg",
+        "logo_img": "images/swiftsightlogo.svg",
         "company_logo_img": "images/ust_logo.png",
         "logo_img_alt": "Logo",
         "has_nav": true,
         "nav_links": [
             {
-                "label": "Home",
-                "url": "/",
-                "style": "link"
-            },
-            {
-                "label": "Offerings",
-                "url": "/offerings",
+                "label": "Swift",
+                "url": "/swiftindex",
                 "style": "link"
             },
             {
@@ -24,7 +19,7 @@
             },
             {
                 "label": "About Us",
-                "url": "/style-guide",
+                "url": "/about",
                 "style": "link"
             },
             {
@@ -33,20 +28,19 @@
                 "style": "link"
             },
             {
+                "label": "Solutions",
+                "url": "/solutions",
+                "style": "link"
+            },
+            {
                 "label": "Contact Us",
                 "url": "/contact",
                 "style": "secondary"
             },
             {
-                "label": "lorem-ipsum",
-                "url": "lorem-ipsum",
-                "style": "link",
-                "has_icon": false,
-                "icon": "arrow-left",
-                "icon_position": "left",
-                "new_window": false,
-                "no_follow": false,
-                "type": "action"
+                "label": "Approach",
+                "url": "/approach",
+                "style": "link"
             }
 
         ]

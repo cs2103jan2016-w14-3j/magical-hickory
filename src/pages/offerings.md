@@ -34,6 +34,9 @@ sections:
             has_icon: true
             icon: arrow-right
             icon_position: right
+            has_border: true
+            border: black
+            icon_color: '006E74'
       - title: Lean Solution Design
         image: images/lean_solution_design.png
         image_alt: App users welcoming a new member
@@ -46,6 +49,9 @@ sections:
             has_icon: true
             icon: arrow-right
             icon_position: right
+            has_border: true
+            border: black
+            icon_color: '006E74'
       - title: Rapid Prototyping
         image: images/rapid_prototyping.png
         image_alt: App user profile preview
@@ -58,6 +64,9 @@ sections:
             has_icon: true
             icon: arrow-right
             icon_position: right
+            has_border: true
+            border: black
+            icon_color: '006E74'
       - title: Prove-it Pilot
         image: images/prove_it_pilot.png
         image_alt: App user profile preview
@@ -70,6 +79,9 @@ sections:
             has_icon: true
             icon: arrow-right
             icon_position: right
+            has_border: true
+            border: black
+            icon_color: '006E74'
   # - section_id: features
   #   type: section_content
   #   background: gray

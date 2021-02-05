@@ -1,7 +1,7 @@
 import React from "react";
 import _ from "lodash";
 import styled from "styled-components";
-import { withPrefix } from "../utils";
+import { withPrefix, markdownify, classNames } from "../utils";
 import CtaButtons from "./CtaButtons";
 
 const OuterDiv = styled.div`
@@ -18,11 +18,17 @@ const BannerDiv = styled.div`
   margin: auto;
   padding: 0 50px;
   max-width: 1024px;
+  height: 430px;
   @media only screen and (max-width: 801px) {
     flex-wrap: wrap;
     height: 580px;
     padding: 0 25px;
+    padding-top: 30px;
+    &.Solutions{
+      padding-top: 50px;
+    }
   }
+
 `;
 
 const InfoboxDiv = styled.div`
@@ -54,6 +60,18 @@ const InfoboxDiv = styled.div`
     line-height: 1.11;
     font-size: 2.25rem;
   }
+  .banner-title.content p{
+    color: white;
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: normal;
+    line-height: 1.11;
+    font-size: 2.25rem;
+    margin: 0 0 0.3em;
+  }
+  .banner-content{
+    color: white;
+  }
   @media only screen and (max-width: 801px) {
     height: 200px;
     width: 100%;
@@ -68,15 +86,16 @@ const InfoboxDiv = styled.div`
       line-height: 1.11;
       letter-spacing: normal;
     }
+
   }
 `;
 
 const BannerImg = styled.img`
-  width: 350px;
-  height: 250px;
+  width: 380px;
+  height: 300px;
   position: relative;
   top: 120px;
-  left: -20px;
+  left: 80px;
   @media only screen and (max-width: 801px) {
     position: relative;
     top: 80px;
@@ -89,9 +108,12 @@ const BannerImg = styled.img`
 export default class SectionHero extends React.Component {
   render() {
     let section = _.get(this.props, "section", null);
+    let content = _.get(section, "content", null);
+    let title = _.get(this.props, "pageContext.frontmatter.title", null)
+    console.log('title is ', title)
     return (
       <OuterDiv>
-        <BannerDiv>
+        <BannerDiv className={title}>
           <InfoboxDiv>
             {_.get(section, "pageTitle", null) && (
               <div className="banner-page-title">
@@ -99,8 +121,13 @@ export default class SectionHero extends React.Component {
               </div>
             )}
             {_.get(section, "title", null) && (
-              <div className="banner-title">
-                {_.get(section, "title", null)}
+              <div className={classNames({"banner-title": true, "content": content})}>
+                {markdownify(_.get(section, "title", null))}
+              </div>
+            )}
+            {_.get(section, "content", null) && (
+              <div className="banner-content">
+                {markdownify(_.get(section, "content", null))}
               </div>
             )}
             {/* <div className="block-copy">

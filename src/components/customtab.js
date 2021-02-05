@@ -9,36 +9,38 @@ const StyledTab = styled.li`
     color: white;
     font-weight: 800; 
     margin: 0.8em 1.5em 0.5em 1.5em;
+    font-size: 13px;
+    cursor: pointer;
   }
   &.tab-list-active {
-    border-bottom: 2px solid white;
+    text-decoration: underline 2px solid white;
+    
   }
-
-  @media (max-width:801px){
+  @media only screen and (max-width:801px){
   &.tab-list-item {
-      margin: 0.8em 0em 0.5em 1.5em;
+      margin: 1em 0.3em 1em 0.3em;
     }
   }
 
-  @media (max-width:1500px){
-    &.tab-list-item {
-        margin: 0.8em 0em 0.5em 1.5em;
-      }
-    }
+
 `
 
+/*  @media only screen and (max-width:1500px){
+  &.tab-list-item {
+    margin: 0.8em 0em 0.5em 1.5em;
+    border-bottom: 2px solid white;
+  }
+}*/
 class CustomTab extends React.Component {
      static propTypes = {
       activeTab: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       onClick: PropTypes.func.isRequired,
     };
-  
     onClick = () => {
       const { label, onClick } = this.props;
       onClick(label);
     }
-  
     render() {
       const {
         onClick,

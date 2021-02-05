@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { htmlToReact, withPrefix } from "../utils";
 
 const BgDiv = styled.section`
+
   .partnershipswift-cell {
     box-sizing: border-box;
     padding-left: 0.8333rem;
@@ -11,6 +12,11 @@ const BgDiv = styled.section`
     position: relative;
     flex-basis: 25%;
     margin-bottom: 120px;
+
+    @media only screen and (max-width: 801px){
+      flex-basis: 50%;
+      margin-bottom: 50px;
+    }
   }
   .grid {
     .partnershipswift-avatar {
@@ -24,10 +30,20 @@ const BgDiv = styled.section`
     text-align: left;
     padding-top: 80px;
 
+    @media only screen and (max-width: 801px){
+      padding-top: 20px;
+      padding-bottom: 5px;
+    }
+
     .partnershipswift-block {
       text-align: left;
       padding-top: 40px;
       margin-bottom: 90px;
+
+      @media only screen and (max-width: 801px){
+        margin-bottom: 60px;
+        padding-top: 20px;
+      }
     }
     .block-subtitle {
       color: #231f20;
@@ -56,7 +72,6 @@ const InnerDiv = styled.div`
 export default class PartnershipSwift extends React.Component {
   render() {
     let section = _.get(this.props, "section", null);
-    let grid_items = _.get(section, "grid_items", null);
     return (
       <BgDiv
         id={_.get(section, "section_id", null)}
@@ -83,8 +98,8 @@ export default class PartnershipSwift extends React.Component {
               {/* use .map to loop through */}
               {_.map(
                 _.get(section, "grid_items", null),
-                (grid_item, review_idx) => (
-                  <div className="partnershipswift-cell">
+                (grid_item, partner_idx) => (
+                  <div key= {partner_idx} className="partnershipswift-cell">
                     {_.get(grid_item, "image", null) && (
                       <img
                         className="partnershipswift-avatar"

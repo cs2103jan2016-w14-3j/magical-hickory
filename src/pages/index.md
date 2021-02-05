@@ -4,6 +4,7 @@ sections:
   - section_id: hero
     type: section_hero
     image: images/innovation_frontpage.png
+    multiple_images: false
     image_alt: App preview
     title: Driving Innovation at Speed and Scale
     content: null
@@ -157,13 +158,14 @@ sections:
     grid_gap_horiz: medium
     grid_gap_vert: medium
   - section_id: call-to-action
+    custom: ""
     type: section_cta_swift
     title: Let's get you started
     subtitle_1: Grow your website. Anytime, anywhere, for different use cases.
     subtitle_2: GET UP AND RUNNING
     image: images/ctaswift_1.svg
     image_alt: cta_image
-    background_color: "#FFFFFF"
+    background_color: "FFFFFF"
     actions:
       - label: Get in touch
         url: /signup
@@ -171,7 +173,7 @@ sections:
         has_icon: true
         icon: arrow-right
         icon_position: right
-        icon_color: black
+        icon_color: "006E74"
         background_color: white
         text_color: black
         has_border: true

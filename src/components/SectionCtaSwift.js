@@ -6,20 +6,35 @@ import CtaButtons from "./CtaButtons";
 import styled from "styled-components";
 
 const BgDiv = styled.section`
-  .background-#FFFFFF {
-    background-color: #ffffff;
-  }
+    &.background-FFFFFF{
+      background-color: #FFFFFF;
+    }
+    &.outer.custom{
+      padding-top: 30px;
+      margin-bottom: 50px;
+    }
+    &.background-F7F7F1{
+      background-color: #F7F7F1;
+    }
 
-  .border-black {
-    border: 1px solid black;
-    background-color: white;
-    border-radius: 0px;
-  }
+    .border-black{
+      border: 1px solid black;
+      background-color: white;
+      border-radius: 0px;
+    }
 
   .cell {
     padding-left: 0px;
     margin-bottom: 10px;
   }
+
+  @media only screen and (max-width:801px){
+      &.outer.custom{
+        padding-top: 10px;
+        margin-bottom: 20px;
+      }
+    }
+
 `;
 
 const SCWIndexDiv = styled.div`
@@ -51,52 +66,55 @@ const SCWIndexDiv = styled.div`
     color: black;
     text-transform: uppercase;
   }
-  .ctaswift-img {
+  @media only screen and (max-width:801px){
+    width: 70%;
+    .block-copy-1 {
+      font-weight: 50;
+      line-height: 24px;
+      font-size: 15px;
+      margin-top: 0px;
+      margin-bottom: 15px;
+      color: black;
+    }
   }
 `;
 
 export default class SectionCtaSwift extends React.Component {
-  render() {
-    console.log(this.props);
-    let section = _.get(this.props, "section", null);
-    let background_color = section.background_color;
-    return (
-      <BgDiv
-        id={_.get(section, "section_id", null)}
-        className={"background-" + background_color + " block cta-block outer"}
-      >
-        <div className="inner-large">
-          <div className="grid">
-            <SCWIndexDiv>
-              {_.get(section, "subtitle_2", null) && (
-                <p className="block-copy-2">
-                  {_.get(section, "subtitle_2", null)}
-                </p>
-              )}
-              {_.get(section, "title", null) && (
-                <h2 className="block-title">{_.get(section, "title", null)}</h2>
-              )}
-              {_.get(section, "subtitle_1", null) && (
-                <p className="block-copy-1">
-                  {/* use htmlToReact to translate html to jsx */}
-                  {htmlToReact(_.get(section, "subtitle_1", null))}
-                </p>
-              )}
-              {/* both conditions must be fullfilled for jsx */}
-              {_.get(section, "actions", null) && (
-                <div className="cell block-buttons">
-                  <CtaButtons
-                    {...this.props}
-                    actions={_.get(section, "actions", null)}
-                  />
-                </div>
-              )}
-              <img
-                className="ctaswift-img"
-                src={withPrefix(_.get(section, "image", null))}
-                alt={_.get(section, "image_alt", null)}
-              />
-            </SCWIndexDiv>
+    render() {
+      console.log(this.props)
+        const section = _.get(this.props, 'custom', null) || _.get(this.props, 'section', null);
+        // custom is for swift theme's custom tab
+        const custom = _.get(section, 'custom', null );
+        console.log('custom is ', custom);
+        let background_color = section.background_color;
+        return (
+            <BgDiv id={_.get(section, 'section_id', null)} className={ "background-"+background_color + " block cta-block outer " + _.get(section, 'custom', '')}>
+              <div className="inner-large">
+                <div className="grid">
+                <SCWIndexDiv> 
+                   {_.get(section, 'subtitle_2', null) && (
+                    <p className="block-copy-2">{_.get(section, 'subtitle_2', null)}</p>
+                    )}
+                    {_.get(section, 'title', null) && (
+                    <h2 className="block-title">{_.get(section, 'title', null)}</h2>
+                    )}
+                    {_.get(section, 'subtitle_1', null) && (
+                    <p className="block-copy-1">
+                      {/* use htmlToReact to translate html to jsx */}
+                      {htmlToReact(_.get(section, 'subtitle_1', null))}
+                    </p>
+                    )}
+                     {/* both conditions must be fullfilled for jsx */ }
+                    {_.get(section, 'actions', null) && (
+                    <div className="cell block-buttons">
+                      <CtaButtons {...this.props} actions={_.get(section, 'actions', null)} />
+                    </div>
+                    )}
+                    <img className="ctaswift-img"
+                        src={withPrefix(_.get(section, "image", null))}
+                        alt={_.get(section, "image_alt", null)}
+                    /> 
+                  </SCWIndexDiv>
           </div>
         </div>
       </BgDiv>

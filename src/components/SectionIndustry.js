@@ -40,7 +40,7 @@ export default class SectionIndustry extends React.Component {
             // <div className="">
             <div className="grid">
               {_.map(_.get(section, "reviews", null), (review, review_idx) => (
-                <div className="cell industry">
+                <div key={review_idx} className="cell industry">
                   {_.get(review, "background", null) && (
                     <img
                       className="industry-avatar"
